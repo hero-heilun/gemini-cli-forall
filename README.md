@@ -1,3 +1,9 @@
+# Gemini CLI FOR ALL
+![image](https://github.com/user-attachments/assets/ea9f097a-f540-46d7-a8d6-9e03069fbc45)
+
+![image](https://github.com/user-attachments/assets/a621a163-1656-41af-82d1-542b5bca0fe1)
+
+
 # Gemini CLI
 
 [![Gemini CLI CI](https://github.com/google-gemini/gemini-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/google-gemini/gemini-cli/actions/workflows/ci.yml)
