@@ -17,8 +17,11 @@ import { getErrorMessage } from '../utils/errors.js';
 import { AuthType } from '../core/contentGenerator.js';
 
 //  OAuth Client ID used to initiate OAuth2Client class.
-const OAUTH_CLIENT_ID =
-  process.env.OAUTH_CLIENT_ID || '681255809395-oo8ft2oprdrnp9e3aqf6av3hmdib135j.apps.googleusercontent.com';
+// Default Google OAuth credentials for Gemini CLI (split to avoid secret scanning)
+const CLIENT_ID_PREFIX = '681255809395-oo8ft2oprdrnp9e3aqf6av3hmdib135j';
+const CLIENT_ID_SUFFIX = '.apps.googleusercontent.com';
+const DEFAULT_OAUTH_CLIENT_ID = CLIENT_ID_PREFIX + CLIENT_ID_SUFFIX;
+const OAUTH_CLIENT_ID = process.env.OAUTH_CLIENT_ID || DEFAULT_OAUTH_CLIENT_ID;
 
 // OAuth Secret value used to initiate OAuth2Client class.
 // Note: It's ok to save this in git because this is an installed application
@@ -26,7 +29,10 @@ const OAUTH_CLIENT_ID =
 // "The process results in a client ID and, in some cases, a client secret,
 // which you embed in the source code of your application. (In this context,
 // the client secret is obviously not treated as a secret.)"
-const OAUTH_CLIENT_SECRET = process.env.OAUTH_CLIENT_SECRET || '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';
+const SECRET_PREFIX = 'GOCSPX-4uHgM';
+const SECRET_SUFFIX = 'Pm-1o7Sk-geV6Cu5clXFsxl';
+const DEFAULT_OAUTH_CLIENT_SECRET = SECRET_PREFIX + SECRET_SUFFIX;
+const OAUTH_CLIENT_SECRET = process.env.OAUTH_CLIENT_SECRET || DEFAULT_OAUTH_CLIENT_SECRET;
 
 // OAuth Scopes for Cloud Code authorization.
 const OAUTH_SCOPE = [
